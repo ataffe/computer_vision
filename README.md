@@ -1,2 +1,2 @@
 # computer_vision
-Computer vision programs written in python as I try to learn more about it following the class on Udacity.com
+THis is a collection of computer vision programs written in python using opencv. These programs come from the quizes in the udacity class at: https://classroom.udacity.com/courses/ud810
