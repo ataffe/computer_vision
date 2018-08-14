@@ -7,3 +7,7 @@ Work flow
 2. git commit -m "[commit message]"
 3. git push origin [master] (or instead  of master name of branch)
 4. git pull (Will fetch and merge remote changes)
+
+TODO
+1. Image Difference Quiz
+2. Apply Gaussian Noise Quiz
