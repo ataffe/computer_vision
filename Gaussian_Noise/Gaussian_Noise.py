@@ -8,6 +8,7 @@ imageName1 = "grand.jpg"
 imageName2 = "noisy.jpg"
 displayMatplot = False
 
+#Generate noise and add it to an image. The noise is from a random normal distribution. 
 def addGaussianNoise(img1, sigma):
     rows = img1.shape[0]
     columns = img1.shape[1]
