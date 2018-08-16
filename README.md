@@ -8,6 +8,8 @@ Work flow
 3. git push origin [master] (or instead  of master name of branch)
 4. git pull (Will fetch and merge remote changes)
 
+note: This is for edits as well.
+
 TODO
 1. Image Difference Quiz
 2. Apply Gaussian Noise Quiz
