@@ -6,9 +6,9 @@ BlendImage = ( 1 - alpha )image2 + (alpha)image1
 
 where:
 
-BlendedImage = The combination of the two images blended together.
-alpha = the percent of image 1 that will be included in the blend.
-image1 = The first image.
+BlendedImage = The combination of the two images blended together.\n
+alpha = the percent of image 1 that will be included in the blend.\m
+image1 = The first image.\n
 image2 = The second image.
 
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/blend/blended_gray.jpg)
