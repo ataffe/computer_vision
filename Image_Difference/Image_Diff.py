@@ -8,8 +8,8 @@ imageName1 = 'Mount_Fuji.jpg'
 imageName2 = 'ocean.jpg'
 
 def diff(img1, img2):
-    #diffImage = (img1 - img2) + (img2 - img1)
-    diffImage = cv2.absdiff(img1,img2)
+    diffImage = (img1 - img2) + (img2 - img1)
+    #diffImage = cv2.absdiff(img1,img2)
     return diffImage
 
 #load a color image in grayscale
@@ -29,6 +29,6 @@ image3 = diff(image1,image2)
 imageName3 = "Difference_Image.jpg"
 cv2.imwrite(imageName3,image3)
 
-cv2.imshow(imageName3, image3)
+cv2.imshow(imageName3, np.array(image3, dtype=np.uint8))
 cv2.waitKey(0)
 cv2.destroyAllWindows()
