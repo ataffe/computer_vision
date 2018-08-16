@@ -11,7 +11,7 @@ where:
 
 **Image** = the image to add noise to.  
 **mean** = The mean of the gaussian distribution.  
-**sigma** = The standard distribution of the gaussian distribution.
+**sigma** = The standard distribution of the gaussian distribution.  
 **rows** = The number of rows for the matrix of random numbers that will be generated. (Should match the number of rows in the image.)  
 **columns** = The number of columns for the matrix of random numbers that will be generated. (Should match the number columns in the image.)  
 
