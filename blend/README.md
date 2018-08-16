@@ -7,7 +7,7 @@ BlendImage = ( 1 - alpha )image2 + (alpha)image1
 where:  
 
 BlendedImage = The combination of the two images blended together  
-alpha = the percent of image 1 that will be included in the blend.  
+alpha = The percent of image 1 that will be included in the blend.  
 image1 = The first image.  
 image2 = The second image.  
 
