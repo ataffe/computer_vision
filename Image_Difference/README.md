@@ -9,4 +9,4 @@ where:
 image1 = The first image.  
 image2 = The second image.  
 
-![alt text](https://raw.github.com/ataffe/computer_vision/master/blend/Difference_Image.jpg)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/Image_Difference/Difference_Image.jpg)
