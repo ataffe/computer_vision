@@ -13,7 +13,7 @@ display = True
 
 # Blend accomplished using the equation:
 # alpha = percent of blend
-# g(x) = (1 - alpha)img2 + (alpha)img2
+# g(x) = (1 - alpha)img2 + (alpha)img1
 def blend(alpha, img1, img2):
     compPercent = 1 - alpha
     img1 = img1 * alpha
