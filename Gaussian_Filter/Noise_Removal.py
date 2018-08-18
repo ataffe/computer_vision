@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 imageName = "PeoriaCityHall.JPG"
 
 #Remove noise hsize = 31, sigma = 5
-def removeNoiseGaussian(img, hsize=31, sigma=5):
+def removeNoiseGaussian(img, hsize=1023, sigma=5):
     kernel = cv2.getGaussianKernel(hsize,sigma)
     img = np.array(img, dtype=np.uint8)
     img = cv2.filter2D(img, -1, kernel)
@@ -23,10 +23,19 @@ def addGaussianNoise(img1, sigma):
 
 image = cv2.imread(imageName, 0)
 print("Shape image 1; " + str(image.shape))
-image = addGaussianNoise(image,16)
-image = removeNoiseGaussian(image)
+noisyImage = addGaussianNoise(image,32)
+blurImage = removeNoiseGaussian(noisyImage)
+
+noisyImageName = imageName[:-4] + "_noisy.jpg"
+blurImageName = imageName[:-4] + "_blur.jpg"
+
+cv2.imwrite(noisyImageName, noisyImage)
+cv2.imwrite(blurImageName, blurImage)
 
 
+
+cv2.imshow( noisyImageName, np.array(noisyImage, dtype=np.uint8 ) )
+cv2.imshow( blurImageName, np.array(blurImage, dtype=np.uint8 ) )
 cv2.imshow( imageName, np.array(image, dtype=np.uint8 ) )
 cv2.waitKey(0)
 cv2.destroyAllWindows()
