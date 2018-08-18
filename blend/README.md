@@ -11,6 +11,7 @@ alpha = The percent of image 1 that will be included in the blend.
 image1 = The first image.  
 image2 = The second image.  
 
+Side note: This one looks zoomed in too???
 # Blended Image
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/blend/blended_gray.jpg)
 
