@@ -9,7 +9,7 @@ where
 **hsize** = the kernel size.  
 **sigma** = the gaussian distribution sigma.  
 
-and the function:  
+To create a gaussian kernel with an input hsize and sigma and the function:  
 
 [image = filter2D(image, -1, kernel)](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html#filter2d)
 
@@ -17,6 +17,8 @@ where
 
 **image** = the image that will blurred or convolved with the input kernel.  
 **kernel** = the kernel that the image will be convolved with.  
+
+To apply the kernel to the image.
 
 # Blurred Image
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Gaussian_Filter/PeoriaCityHall_blur.jpg)
