@@ -11,4 +11,4 @@ Work flow
 note: This is for edits as well.
 
 TODO
-1. Filters quiz
+1. Filters quiz (Add equations)
