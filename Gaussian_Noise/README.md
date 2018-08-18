@@ -15,5 +15,10 @@ where:
 **rows** = The number of rows for the matrix of random numbers that will be generated. (Should match the number of rows in the image.)  
 **columns** = The number of columns for the matrix of random numbers that will be generated. (Should match the number columns in the image.)  
 
+# Noisy Image
 Side Note: It kind of makes the image look, old timey like it was taken with a black n white camera a long time ago. I wonder if images with those cameras had a lot of noise?
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Gaussian_Noise/noisy.jpg)
+
+# Original Image
+![alt text](https://raw.github.com/ataffe/computer_vision/master/Gaussian_Noise/grand.jpg)
+
