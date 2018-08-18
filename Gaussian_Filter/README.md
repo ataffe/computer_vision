@@ -2,7 +2,7 @@
 
 This is the folder for the gaussian filter quiz on teh udacity course ud810. I used the opencv functions:  
 
-[kernel = getGaussianKernel(hsize, sigma)] (https://docs.opencv.org/3.0-beta/modules/imgproc/doc/filtering.html#getgaussiankernel)  
+[kernel = getGaussianKernel(hsize, sigma)](https://docs.opencv.org/3.0-beta/modules/imgproc/doc/filtering.html#getgaussiankernel)  
 
 where  
 
