@@ -32,6 +32,10 @@ blurImageName = imageName[:-4] + "_blur.jpg"
 cv2.imwrite(noisyImageName, noisyImage)
 cv2.imwrite(blurImageName, blurImage)
 
+fig = plt.figure(figsize=plt.figaspect(0.5))
+ax = fig.add_subplot(1,2,1, projection='3d')
+
+
 
 
 cv2.imshow( noisyImageName, np.array(noisyImage, dtype=np.uint8 ) )
@@ -39,3 +43,5 @@ cv2.imshow( blurImageName, np.array(blurImage, dtype=np.uint8 ) )
 cv2.imshow( imageName, np.array(image, dtype=np.uint8 ) )
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
