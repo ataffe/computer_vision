@@ -1,9 +1,8 @@
 # Blend
 
 This folder is for the blend quiz on the udacity course. I created a function in python to blend an image using the equation:
-```
-BlendImage = ( 1 - \alpha )Image2 + (\alpha)Image1
-```
+
+![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/Blend.PNG)  
 where:  
 
 BlendedImage = The combination of the two images blended together  
