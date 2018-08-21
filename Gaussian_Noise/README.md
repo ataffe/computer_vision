@@ -4,7 +4,7 @@ This folder is for the gaussian noise quize on the udacity course. I created a f
 
 [numpy.random.normal()](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.normal.html)
 Then added it to the image like so:  
-```
+``` python
 noisyImage = Image + (numpy.random.normal(mean,sigma,(rows,columns)))
 ```
 where:
