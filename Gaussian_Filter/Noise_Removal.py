@@ -54,7 +54,7 @@ def displayFilter():
 def showSlideBar():
     bar1 = Scale(root, from_=1, to=70, orient=HORIZONTAL, variable=blurSigma, length=200)
     bar2 = Scale(root, from_=1, to=70, orient=HORIZONTAL, variable=noiseSigma, length=200)
-    bar3 = Scale(root, from_=31, to=1023, orient=HORIZONTAL, variable=kernelSize, resolution=2, length=200)
+    bar3 = Scale(root, from_=31, to=1023, orient=HORIZONTAL, variable=kernelSize, resolution=3, length=200)
 
     bar1.pack()
     bar2.pack()
