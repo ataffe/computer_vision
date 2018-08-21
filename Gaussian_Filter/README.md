@@ -10,6 +10,10 @@ where
 **hsize** = the kernel size.  
 **sigma** = the gaussian distribution sigma.  
 
+The kernel is generated based on a circular symmetric gaussian distribution:
+
+![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/circular_sym_gauss.PNG)
+
 To create a gaussian kernel with an input hsize and sigma and the function:  
 
 [image = filter2D(image, -1, kernel)](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html#filter2d)
