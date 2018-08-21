@@ -33,4 +33,5 @@ Side Side Note: It kind of makes the image look, old timey like it was taken wit
 # Adding two matrices
 The following example is from: https://www.varsitytutors.com/hotmath/hotmath_help/topics/adding-and-subtracting-matrices
 
+This is why the noise matrix must be the same size as the image.
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/adding_matrices.PNG) 
