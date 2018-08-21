@@ -33,7 +33,7 @@ otherwise if you have python 2 and 3 installed run:
 
 ```py -3 get-pip.py```
 
-Note: I got these instruction from the [pip website] (
+Note: I got these instruction from the [pip website] (https://pip.pypa.io/en/stable/installing)
 
 # Installing opencv with python 3
 
