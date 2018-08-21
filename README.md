@@ -18,7 +18,7 @@ TODO
 
 Go to: https://www.python.org/downloads/ and download it.
 
-# Installing pip python 3
+# Installing pip with python 3
 This is a python package manager I believe, and I used it to install opencv 3 for python 3, numpy, and matplotlib.
 
 Run the command: 
