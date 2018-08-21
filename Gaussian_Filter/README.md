@@ -14,7 +14,7 @@ The kernel is generated based on a circular symmetric gaussian distribution(atle
 
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/circular_sym_gauss.PNG)
 
-To create a gaussian kernel with an input hsize and sigma and the function:  
+To apply the kernel to the image I used the function:
 
 [image = filter2D(image, -1, kernel)](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html#filter2d)
 
