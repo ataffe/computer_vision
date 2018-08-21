@@ -4,10 +4,10 @@ This folder is for the gaussian noise quize on the udacity course. I created a f
 
 [numpy.random.normal()](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.normal.html)
 
-which uses the probability function:
+which generates random numbers using the probability density function:
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/Gaussian_Noise.PNG)  
 
-Then I added it to the image like so:  
+The python function generates a matrix of random numbers of size "rows" x "colmuns". Then I added it to the image like so:  
 ``` python
 noisyImage = Image + (numpy.random.normal(mean,sigma,(rows,columns)))
 ```
@@ -18,6 +18,8 @@ where:
 **sigma** = The standard distribution of the gaussian distribution.  
 **rows** = The number of rows for the matrix of random numbers that will be generated. (Should match the number of rows in the image.)  
 **columns** = The number of columns for the matrix of random numbers that will be generated. (Should match the number columns in the image.)  
+
+Note: The matrix size must be the same size as the image, because...linear algebra.
 
 # Noisy Image
 Side Note: I scaled the image but I didn't mean to zoom in, it looks like the image in zoomed in on the clock
