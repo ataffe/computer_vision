@@ -1,4 +1,5 @@
 # Gaussian Filter
+note: This module is built for python 3 becuase it uses tkinter to adjust both sigmas and kernel size. See the computer_vision folder for how to install python 3, opencv 3, matplotlib, and numpy. 
 
 This is the folder for the gaussian filter quiz on teh udacity course ud810. I used the opencv functions:  
 
