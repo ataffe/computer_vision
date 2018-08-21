@@ -3,6 +3,10 @@
 This folder is for the gaussian noise quize on the udacity course. I created a function in python to add random normal noise to an image using the function:
 
 [numpy.random.normal()](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.normal.html)
+
+The numpy.random.normal() function generates random normal noise using the probability function:
+![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/Gauissian_Noise.PNG)
+
 Then added it to the image like so:  
 ``` python
 noisyImage = Image + (numpy.random.normal(mean,sigma,(rows,columns)))
