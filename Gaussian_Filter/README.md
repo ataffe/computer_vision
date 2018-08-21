@@ -12,6 +12,7 @@ where
 
 The kernel is generated based on a circular symmetric gaussian distribution(atleast I hope it is):
 
+(This is wrong it's not a circular symmetric gaussian distribution)
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/circular_sym_gauss.PNG)
 
 To apply the kernel to the image I used the function:
