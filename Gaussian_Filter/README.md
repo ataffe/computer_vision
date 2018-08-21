@@ -10,7 +10,7 @@ where
 **hsize** = the kernel size.  
 **sigma** = the gaussian distribution sigma.  
 
-The kernel is generated based on a circular symmetric gaussian distribution:
+The kernel is generated based on a circular symmetric gaussian distribution(atleast I hope it is):
 
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/circular_sym_gauss.PNG)
 
