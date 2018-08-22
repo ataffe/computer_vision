@@ -1,5 +1,5 @@
 # computer_vision
-This is a collection of computer vision programs written in python using opencv. These programs come from the quizes in the udacity class at: https://classroom.udacity.com/courses/ud810
+This is a collection of computer vision programs written in python using opencv. These programs come from the quizes in the udacity class at: https://classroom.udacity.com/courses/ud810. I used python 3, opencv 3, and matpotlib below are instructions for installing them. These programs should still work with python 2 but I have not tested this.
 
 Note to self:
 Work flow
