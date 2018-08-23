@@ -63,6 +63,10 @@ def getGaussianKernel(shape=(6,6), sigma=0.5):
     h = np.exp( -(x*x + y*y) / (2.0 * sigma * sigma) )
     
     #Note: find out what eps is.
+    # esp -> Is the smallest representable positive number such that 1.0 + eps != 1.0
+    if(h < np.finfo(h.dtype).eps*h.max()):
+        print("h < np.finfo(h.dtype).eps*h.max(): " + str(h < np.finfo(h.dtype).eps*h.max()) )
+        
     h[ h < np.finfo(h.dtype).eps*h.max() ] = 0
 
     print(np.finfo(h.dtype))
