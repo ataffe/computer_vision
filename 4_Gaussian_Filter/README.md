@@ -4,7 +4,7 @@ note: This module is built for python 3 becuase it uses tkinter to adjust both s
 
 
 This is the folder for the gaussian filter quiz on the udacity course ud810. I used the opencv functions:  
-
+(This is wrong it doesn't return a circular symmetric gaussian distribution)  
 [kernel = getGaussianKernel(hsize, sigma)](https://docs.opencv.org/3.0-beta/modules/imgproc/doc/filtering.html#getgaussiankernel)  
 
 where  
@@ -14,7 +14,6 @@ where
 
 The kernel is generated based on a circular symmetric gaussian distribution(atleast I hope it is):
 
-(This is wrong it's not a circular symmetric gaussian distribution)  
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/circular_sym_gauss.PNG)
 
 To apply the kernel to the image I used the function:
