@@ -48,3 +48,4 @@ If you have both python 2 and 3, just substitiue "python" with "py -3" if you ha
 Run the command...you guessed it:
 ``` python -m pip install matplotlib```
 Note: The same thing goes for versions 2 and 3.
+  
