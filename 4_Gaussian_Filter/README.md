@@ -29,13 +29,13 @@ To apply the kernel to the image.
 
 # Blurred Image
 (Kernel Size = 1023   Sigma = 5)
-![alt text](https://raw.github.com/ataffe/computer_vision/master/Gaussian_Filter/PeoriaCityHall_blur.jpg)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/1_Gaussian_Filter/PeoriaCityHall_blur.jpg)
 
 # Noise Image
 (Sigma = 32)
-![alt text](https://raw.github.com/ataffe/computer_vision/master/Gaussian_Filter/PeoriaCityHall_noisy.jpg)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/1_Gaussian_Filter/PeoriaCityHall_noisy.jpg)
 
 # Original Image
-![alt text](https://raw.github.com/ataffe/computer_vision/master/Gaussian_Filter/PeoriaCityHall.JPG)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/1_Gaussian_Filter/PeoriaCityHall.JPG)
 
 
