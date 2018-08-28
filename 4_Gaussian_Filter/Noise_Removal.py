@@ -3,6 +3,8 @@ import cv2
 from matplotlib import pyplot as plt
 import threading
 from tkinter import *
+from Gaussian_Kernel import getGaussianKernel
+import matplotlib.pyplot as plt
 
 imageName = "PeoriaCityHall.JPG"
 image = cv2.imread(imageName, 0)
@@ -17,6 +19,8 @@ def addGaussianNoise(img1, sigma):
     columns = img1.shape[1]
     noise = np.random.normal(0,sigma ,(rows,columns))
     noise = noise.astype(int)
+    noise = getGaussianKernel((rows,columns), sigma)
+
     return img1 + noise
 
 noisyImage = addGaussianNoise(image,32)
@@ -30,14 +34,12 @@ class filterThread (threading.Thread):
     def run(self):
         displayFilter()
 
-
 #Remove noise hsize = 31, sigma = 5
-def removeNoiseGaussian(img, hsize=1023, sigma=5):
-    kernel = cv2.getGaussianKernel(hsize,sigma)
+def removeNoiseGaussian(img, hsize=30, sigma=5):
+    kernel = getGaussianKernel((hsize, hsize), sigma)
     img = np.array(img, dtype=np.uint8)
     img = cv2.filter2D(img, -1, kernel)
     return img
-
 
 def displayFilter():
     while(True):
@@ -53,7 +55,7 @@ def displayFilter():
 
 def showSlideBar():
     bar1 = Scale(root, from_=1, to=70, orient=HORIZONTAL, variable=blurSigma, length=200)
-    bar2 = Scale(root, from_=1, to=70, orient=HORIZONTAL, variable=noiseSigma, length=200)
+    bar2 = Scale(root, from_=31, to=60, orient=HORIZONTAL, variable=noiseSigma, length=200)
     bar3 = Scale(root, from_=31, to=1023, orient=HORIZONTAL, variable=kernelSize, resolution=3, length=200)
 
     bar1.pack()
@@ -62,13 +64,12 @@ def showSlideBar():
 
     bar1 = Label(root, text= "Blur Sigma Adjustment (Top)")
     bar2 = Label(root, text= "Noise Sigma Adjustment (Middle)")
-    bar3 = Label(root, text= "Kernel Size Adjustment (Bottom)")
+    bar3 = Label(root, text= "Blur Kernel Size Adjustment (Bottom)")
     
-    bar3.pack()
-    bar2.pack()
     bar1.pack()
+    bar2.pack()
+    bar3.pack()
     root.mainloop()
-
 
 noisyImageName = imageName[:-4] + "_noisy.jpg"
 blurImageName = imageName[:-4] + "_blur.jpg"

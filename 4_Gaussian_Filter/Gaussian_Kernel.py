@@ -83,7 +83,7 @@ def getGaussianKernel(shape=(6,6), sigma=0.5):
     return kernel
 
 #uncomment to plot
-#gaussian_kernel = getGaussianKernel((13,13),3)
+#gaussian_kernel = getGaussianKernel((30,30),5)
 #plt.imshow(gaussian_kernel)
 #plt.colorbar()
 #plt.show()
