@@ -1,11 +1,18 @@
 import numpy as np
+from decimal import Decimal
+import matplotlib.pyplot as plt
+
+# python program to generate a gaussian kernel that is a ported from matlab's fspecial('gaussian')
+# taken from the stack overflow post at:
+# https://stackoverflow.com/questions/17190649/how-to-obtain-a-gaussian-filter-in-python/17201686
+
 
 def getGaussianKernel(shape=(6,6), sigma=0.5):
 
     # 2D gaussian mask - should give the same result as MATLAB's
     # fspecial('gaussian', [shape], [sigma])
 
-    #shape is a tuple of (6,6) so the below expression expands to
+    #The comments show an example shape of (6,6) with a sigma of 0.5 so the below expression expands to
     # (6 - 1) / 2
     # This is done twice
     m, n = [(ss - 1.0) / 2.0 for ss in shape]
@@ -59,17 +66,11 @@ def getGaussianKernel(shape=(6,6), sigma=0.5):
     # [ 4.13993772e-08 1.23409804e-04 6.73794700e-03 6.73794700e-03 1.23409804e-04 4.13993772e-08]
     # [ 1.38879439e-11 4.13993772e-08 2.26032941e-06 2.26032941e-06 4.13993772e-08 1.38879439e-11]]
     #
-    # h is a 6 x 6 matrix
     h = np.exp( -(x*x + y*y) / (2.0 * sigma * sigma) )
     
-    #Note: find out what eps is.
-    # esp -> Is the smallest representable positive number such that 1.0 + eps != 1.0
-    if(h < np.finfo(h.dtype).eps*h.max()):
-        print("h < np.finfo(h.dtype).eps*h.max(): " + str(h < np.finfo(h.dtype).eps*h.max()) )
-        
+    # eps -> Is the smallest representable positive number such that 1.0 + eps != 1.0
+    # This seems to truncate numbers that are too small.
     h[ h < np.finfo(h.dtype).eps*h.max() ] = 0
-
-    print(np.finfo(h.dtype))
 
     #Get the sum of the kernel
     sumh = h.sum()
@@ -80,24 +81,8 @@ def getGaussianKernel(shape=(6,6), sigma=0.5):
 
     return h
 
+gaussian_kernel = getGaussianKernel((13,13),3)
 
-
-
-getGaussianKernel()
-
-
-#Example from stack overlfow.
-
-def matlab_style_gauss2D(shape=(3,3),sigma=0.5):
-    """
-    2D gaussian mask - should give the same result as MATLAB's
-    fspecial('gaussian',[shape],[sigma])
-    """
-    m,n = [(ss-1.)/2. for ss in shape]
-    y,x = np.ogrid[-m:m+1,-n:n+1]
-    h = np.exp( -(x*x + y*y) / (2.*sigma*sigma) )
-    h[ h < np.finfo(h.dtype).eps*h.max() ] = 0
-    sumh = h.sum()
-    if sumh != 0:
-        h /= sumh
-    return h
+plt.imshow(gaussian_kernel)
+plt.colorbar()
+plt.show()
