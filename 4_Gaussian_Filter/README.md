@@ -13,8 +13,8 @@ The function is called
 
 where  
 
-**shape** = Sould be a 2 element tuple which represents the size of the kernel  
-**sigma** = Should be the standard deviation of the gaussian distribution used to generate the kernel.  
+**shape** = A 2 element tuple which represents the size of the kernel  
+**sigma** = The standard deviation of the gaussian distribution used to generate the kernel.  
 
 Here is an example distribution created with a **sigma of 5** and **kernel size of 30x30** graphed using matplotlib's [plot.pyplot.imshow](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html) function.  
 
