@@ -1,7 +1,6 @@
 # Gaussian Filter
 ##### Note: This module is built for python 3 becuase it uses tkinter to adjust both sigmas and kernel size. See the computer_vision folder for how to install python 3, opencv 3, matplotlib, and numpy. 
-
-
+--- 
 
 This is the folder for the gaussian filter quiz on the udacity course ud810. With the help of stack overflow, I created a function based on the matlab function fspecial('gaussian', [shape], [sigma]) that creates a gaussian kernel using the formula for a 2D gaussian function:  
 
