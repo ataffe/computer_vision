@@ -12,10 +12,10 @@ image2 = The second image.
 
 Side note: This one looks zoomed in too???
 # Blended Image
-![alt text](https://raw.github.com/ataffe/computer_vision/master/1_blend/blended_gray.jpg)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/1_Blend/blended_gray.jpg)
 
 # Original Image 1
-![alt text](https://raw.github.com/ataffe/computer_vision/master/1_blend/lena.jpg)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/1_Blend/lena.jpg)
 
 # Original Image 2
-![alt text](https://raw.github.com/ataffe/computer_vision/master/1_blend/mountain.jpg)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/1_Blend/mountain.jpg)
