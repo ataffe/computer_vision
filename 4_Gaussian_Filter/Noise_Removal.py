@@ -19,7 +19,6 @@ def addGaussianNoise(img1, sigma):
     columns = img1.shape[1]
     noise = np.random.normal(0,sigma ,(rows,columns))
     noise = noise.astype(int)
-    noise = getGaussianKernel((rows,columns), sigma)
 
     return img1 + noise
 
@@ -55,8 +54,8 @@ def displayFilter():
 
 def showSlideBar():
     bar1 = Scale(root, from_=1, to=70, orient=HORIZONTAL, variable=blurSigma, length=200)
-    bar2 = Scale(root, from_=31, to=60, orient=HORIZONTAL, variable=noiseSigma, length=200)
-    bar3 = Scale(root, from_=31, to=1023, orient=HORIZONTAL, variable=kernelSize, resolution=3, length=200)
+    bar2 = Scale(root, from_=1, to=60, orient=HORIZONTAL, variable=noiseSigma, length=200)
+    bar3 = Scale(root, from_=31, to=113, orient=HORIZONTAL, variable=kernelSize, resolution=1, length=200)
 
     bar1.pack()
     bar2.pack()
