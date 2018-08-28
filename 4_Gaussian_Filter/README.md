@@ -1,5 +1,5 @@
 # Gaussian Filter
-#### note: This module is built for python 3 becuase it uses tkinter to adjust both sigmas and kernel size. See the computer_vision folder for how to install python 3, opencv 3, matplotlib, and numpy. 
+##### Note: This module is built for python 3 becuase it uses tkinter to adjust both sigmas and kernel size. See the computer_vision folder for how to install python 3, opencv 3, matplotlib, and numpy. 
 
 
 
