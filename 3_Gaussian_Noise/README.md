@@ -25,10 +25,10 @@ Note: The matrix size must be the same size as the image, because...linear algeb
 Side Note: I scaled the image but I didn't mean to zoom in, it looks like the image in zoomed in on the clock
 
 Side Side Note: It kind of makes the image look, old timey like it was taken with a black n white camera a long time ago. I wonder if images with those cameras had a lot of noise?
-![alt text](https://raw.github.com/ataffe/computer_vision/master/Gaussian_Noise/noisy.jpg)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/3_Gaussian_Noise/noisy.jpg)
 
 # Original Image
-![alt text](https://raw.github.com/ataffe/computer_vision/master/Gaussian_Noise/grand.jpg)
+![alt text](https://raw.github.com/ataffe/computer_vision/master/3_Gaussian_Noise/grand.jpg)
 
 # Adding two matrices
 The following example is from: https://www.varsitytutors.com/hotmath/hotmath_help/topics/adding-and-subtracting-matrices
