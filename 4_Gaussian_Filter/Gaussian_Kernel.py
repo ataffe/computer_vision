@@ -3,6 +3,7 @@ from decimal import Decimal
 import matplotlib.pyplot as plt
 
 # python program to generate a gaussian kernel that is a ported from matlab's fspecial('gaussian')
+# with the addition of multiplying the gaussian kernel by 1/2 * pi * sigma ^2
 # taken from the stack overflow post at:
 # https://stackoverflow.com/questions/17190649/how-to-obtain-a-gaussian-filter-in-python/17201686
 
@@ -15,7 +16,7 @@ def getGaussianKernel(shape=(6,6), sigma=0.5):
     #The comments show an example shape of (6,6) with a sigma of 0.5 so the below expression expands to
     # (6 - 1) / 2
     # This is done twice
-    m, n = [(ss - 1.0) / 2.0 for ss in shape]
+    row, column = [(ss - 1.0) / 2.0 for ss in shape]
 
     # x: [[-2.5 -1.5 -0.5  0.5  1.5  2.5]]
     # y: [[-2.5]
@@ -26,7 +27,7 @@ def getGaussianKernel(shape=(6,6), sigma=0.5):
     #   [ 2.5]]
     #
     #   Note: x and y are of type ndarray.
-    y,x = np.ogrid[-m:m + 1, -n:n + 1]
+    y,x = np.ogrid[-row:row + 1, -column:column + 1]
 
     #The below expression broken down.
     #
@@ -58,31 +59,31 @@ def getGaussianKernel(shape=(6,6), sigma=0.5):
     # [-17.  -9.  -5.  -5.  -9. -17.]
     # [-25. -17. -13. -13. -17. -25.]]
 
-    #  h = e ^ ( -(x*x + y*y) / (2.0 * sigma * sigma) ) = 
-    # [[1.38879439e-11 4.13993772e-08 2.26032941e-06 2.26032941e-06 4.13993772e-08 1.38879439e-11]
-    # [ 4.13993772e-08 1.23409804e-04 6.73794700e-03 6.73794700e-03 1.23409804e-04 4.13993772e-08]
-    # [ 2.26032941e-06 6.73794700e-03 3.67879441e-01 3.67879441e-01 6.73794700e-03 2.26032941e-06]
-    # [ 2.26032941e-06 6.73794700e-03 3.67879441e-01 3.67879441e-01 6.73794700e-03 2.26032941e-06]
-    # [ 4.13993772e-08 1.23409804e-04 6.73794700e-03 6.73794700e-03 1.23409804e-04 4.13993772e-08]
-    # [ 1.38879439e-11 4.13993772e-08 2.26032941e-06 2.26032941e-06 4.13993772e-08 1.38879439e-11]]
+    #  kernel = 1 / (2 * pi * sigma * sigma) e ^ ( -(x*x + y*y) / (2.0 * sigma * sigma) ) = 
+    # [[8.84133966e-12 2.63556621e-08 1.43897039e-06 1.43897039e-06 2.63556621e-08 8.84133966e-12]
+    #  [2.63556621e-08 7.85651214e-05 4.28951028e-03 4.28951028e-03 7.85651214e-05 2.63556621e-08]
+    #  [1.43897039e-06 4.28951028e-03 2.34199326e-01 2.34199326e-01 4.28951028e-03 1.43897039e-06]
+    #  [1.43897039e-06 4.28951028e-03 2.34199326e-01 2.34199326e-01 4.28951028e-03 1.43897039e-06]
+    #  [2.63556621e-08 7.85651214e-05 4.28951028e-03 4.28951028e-03 7.85651214e-05 2.63556621e-08]
+    #  [8.84133966e-12 2.63556621e-08 1.43897039e-06 1.43897039e-06 2.63556621e-08 8.84133966e-12]]
     #
-    h = np.exp( -(x*x + y*y) / (2.0 * sigma * sigma) )
-    
+    kernel = (1/ (2 * np.pi * sigma * sigma) ) * np.exp( -(x*x + y*y) / (2.0 * sigma * sigma) )
+
     # eps -> Is the smallest representable positive number such that 1.0 + eps != 1.0
     # This seems to truncate numbers that are too small.
-    h[ h < np.finfo(h.dtype).eps*h.max() ] = 0
+    kernel[ kernel < np.finfo(kernel.dtype).eps*kernel.max() ] = 0
 
     #Get the sum of the kernel
-    sumh = h.sum()
+    kernelSum = kernel.sum()
 
     #Rememeber the gaussian distribution has a mean of 0
-    if sumh != 0:
-        h /= sumh
+    if kernelSum != 0:
+        kernel /= kernelSum
 
-    return h
+    return kernel
 
-gaussian_kernel = getGaussianKernel((13,13),3)
+#gaussian_kernel = getGaussianKernel((13,13),3)
 
-plt.imshow(gaussian_kernel)
-plt.colorbar()
-plt.show()
+#plt.imshow(gaussian_kernel)
+#plt.colorbar()
+#plt.show()
