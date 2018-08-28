@@ -7,20 +7,20 @@ This is the folder for the gaussian filter quiz on the udacity course ud810. Wit
 
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/circular_sym_gauss.PNG)
 
-The function is called 
+The function is called  
 
 [getGaussianKernel(shape, sigma)](https://github.com/ataffe/computer_vision/blob/master/4_Gaussian_Filter/Gaussian_Kernel.py)
 
-where
+where  
 
-**shape** Sould be a 2 element tuple which represents the size of the kernel
-**sigma** Should be the standard deviation of the gaussian distribution used to generate the kernel.
+**shape** Sould be a 2 element tuple which represents the size of the kernel  
+**sigma** Should be the standard deviation of the gaussian distribution used to generate the kernel.  
 
-Here is an example distribution created with a **sigma of 5** and **kernel size of 30x30** graphed using matplotlib's [plot.pyplot.imshow](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html) function.
+Here is an example distribution created with a **sigma of 5** and **kernel size of 30x30** graphed using matplotlib's [plot.pyplot.imshow](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html) function.  
 
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/4_Gaussian_Filter/Gaussian_Kernel_S5.png)
 
-To apply the kernel to the image I used the function:
+To apply the kernel to the image I used the function:  
 
 [image = filter2D(image, -1, kernel)](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html#filter2d)
 
