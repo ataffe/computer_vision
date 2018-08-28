@@ -3,18 +3,22 @@ note: This module is built for python 3 becuase it uses tkinter to adjust both s
 
 
 
-This is the folder for the gaussian filter quiz on the udacity course ud810. I used the opencv functions:  
-(This is wrong it doesn't return a circular symmetric gaussian distribution)  
-[kernel = getGaussianKernel(hsize, sigma)](https://docs.opencv.org/3.0-beta/modules/imgproc/doc/filtering.html#getgaussiankernel)  
-
-where  
-
-**hsize** = the kernel size.  
-**sigma** = the gaussian distribution sigma.  
-
-The kernel is generated based on a circular symmetric gaussian distribution(atleast I hope it is):
+This is the folder for the gaussian filter quiz on the udacity course ud810. With the help of stack overflow, I created a function based on the matlab function fspecial('gaussian', [shape], [sigma]) that creates a gaussian kernel using the formula for a 2D gaussian function:  
 
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/Math_Screenshots/circular_sym_gauss.PNG)
+
+The function is called 
+
+[getGaussianKernel(shape, sigma)](https://github.com/ataffe/computer_vision/blob/master/4_Gaussian_Filter/Gaussian_Kernel.py)
+
+where
+
+**shape** Sould be a 2 element tuple which represents the size of the kernel
+**sigma** Should be the standard deviation of the gaussian distribution used to generate the kernel.
+
+Here is an example distribution created with a **sigma of 5** and **kernel size of 30x30** graphed using matplotlib's [plot.pyplot.imshow](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html) function.
+
+![alt text](https://raw.github.com/ataffe/computer_vision/master/4_Gaussian_Filter/Gaussian_Kernel_S5.png)
 
 To apply the kernel to the image I used the function:
 
@@ -28,7 +32,7 @@ where
 To apply the kernel to the image.
 
 # Blurred Image
-(Kernel Size = 1023   Sigma = 5)
+(Kernel Size = 41   Sigma = 6)
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/4_Gaussian_Filter/PeoriaCityHall_blur.jpg)
 
 # Noise Image
