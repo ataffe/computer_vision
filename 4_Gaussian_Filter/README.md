@@ -29,8 +29,6 @@ where
 **image** = the image that will blurred or convolved with the input kernel.  
 **kernel** = the kernel that the image will be convolved with.  
 
-To apply the kernel to the image.
-
 # Blurred Image
 (Kernel Size = 41   Sigma = 6)
 ![alt text](https://raw.github.com/ataffe/computer_vision/master/4_Gaussian_Filter/PeoriaCityHall_blur.jpg)
