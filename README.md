@@ -11,7 +11,7 @@ Work flow
 note: This is for edits as well.
 
 TODO
-1. Filters quiz (Add equations)
+1. Filters quiz (Add correlation functions)
 
 
 # Installing python 3 on Windows
