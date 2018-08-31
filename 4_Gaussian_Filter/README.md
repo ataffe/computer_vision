@@ -25,8 +25,8 @@ To apply the kernel to the image I used the function:
 
 where   
 
-**image** = the image that will blurred or convolved with the input kernel.  
-**kernel** = the kernel that the image will be convolved with.  
+**image** = the image that will blurred or correlated with the input kernel.  
+**kernel** = the kernel that the image will be correlated with.  
 
 # Blurred Image
 (Kernel Size = 41   Sigma = 6)
